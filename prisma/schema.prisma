@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url = env("file:./dev.db")
+  provider = "mysql"
+  url = env("DATABASE_URL")
 }
 
 model users {
@@ -12,6 +12,7 @@ model users {
   username String
   email String @unique
   password String
+  features Json
   created_at DateTime @default(now())
   updated_at DateTime @default(now())
   recoverys recoverys[]
