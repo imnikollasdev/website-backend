@@ -1,15 +1,15 @@
-import { IsEmail, IsAlphanumeric, IsNotEmpty } from 'class-validator';
+import { IsEmail, IsAlphanumeric, IsNotEmpty } from "class-validator";
 
 export class RegisterDto {
-  @IsNotEmpty()
-  @IsAlphanumeric()
-  username: string;
+    @IsNotEmpty()
+    @IsAlphanumeric()
+    username: string;
 
-  @IsNotEmpty()
-  @IsEmail()
-  email: string;
+    @IsNotEmpty()
+    @IsEmail()
+    email: string;
 
-  @IsNotEmpty()
-  @IsAlphanumeric()
-  password: string;
+    @IsNotEmpty()
+    @IsAlphanumeric()
+    password: string;
 }

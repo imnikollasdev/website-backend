@@ -1,11 +1,11 @@
-import { IsAlphanumeric, IsNotEmpty, IsUUID } from 'class-validator';
+import { IsAlphanumeric, IsNotEmpty, IsUUID } from "class-validator";
 
 export class ChangePasswordDto {
-  @IsNotEmpty()
-  @IsUUID()
-  id: string;
+    @IsNotEmpty()
+    @IsUUID()
+    id: string;
 
-  @IsNotEmpty()
-  @IsAlphanumeric()
-  password: string;
+    @IsNotEmpty()
+    @IsAlphanumeric()
+    password: string;
 }
